@@ -1,0 +1,30 @@
+/*---------- block menu vertical css ----------*/
+.bz-menu-vertical > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bz-menu-vertical > ul > li {
+  position: relative;
+  margin-bottom: 16px;
+}
+.bz-menu-vertical > ul > li:last-child {
+  margin-bottom: 0;
+}
+.bz-menu-vertical > ul > li > a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+.bz-menu-vertical > ul > li > a.active {
+  background-color: #007bff;
+}
+
+@media (min-width: 992px) {
+  .bz-menu-vertical > ul > li > a:hover {
+    color: #007bff;
+  }
+}
+/*---------- end block menu vertical css ----------*/

@@ -1,0 +1,138 @@
+<script setup lang="ts">
+interface Partner {
+  image: string
+  isBig?: boolean
+}
+interface Props {
+  title: string
+  partners: Partner[]
+}
+defineProps<Props>()
+</script>
+
+<template>
+  <div class="bz-block is-padding-top is-padding-bottom bg-info bz-block-partners-grid vvs-nic-block-partners-grid" id="vvs-nic-block-partners-grid">
+    <div class="container">
+      <div class="bz-box is-center">
+        <div class="bz-box__title">
+          <div class="bz-box__title__main">
+            <div class="bz-box__title__name">{{ title }}</div>
+          </div>
+        </div>
+        <div class="bz-box__content">
+          <div class="bz-partners-grid">
+            <ul>
+              <li v-for="(partner, idx) in partners" :key="idx" :class="{ 'is-big': partner.isBig }">
+                <div class="bz-partners-item">
+                  <div class="bz-partners-item__inner">
+                    <figure><img :src="partner.image" alt="partner" /></figure>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.bz-box .bz-box__title .bz-box__title__name {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  font-size: 36px;
+}
+.bz-partners-item {
+  background-color: #fff;
+}
+.bz-partners-item .bz-partners-item__inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 50%;
+}
+.bz-partners-item .bz-partners-item__inner a, .bz-partners-item .bz-partners-item__inner figure {
+  margin-bottom: 0;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bz-partners-item .bz-partners-item__inner a img, .bz-partners-item .bz-partners-item__inner figure img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.bz-partners-grid > ul {
+  list-style: none;
+  margin: 0 -8px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.bz-partners-grid > ul > li {
+  width: 50%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 16px;
+}
+.bz-partners-grid > ul > li.is-big {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .bz-partners-grid > ul > li {
+    width: 33.3333333333%;
+  }
+  .bz-partners-grid > ul > li.is-big {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .bz-partners-grid > ul {
+    list-style: none;
+    margin: 0 -12px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .bz-partners-grid > ul > li {
+    width: 25%;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 24px;
+  }
+  .bz-partners-grid > ul > li.is-big {
+    width: 33.3333333333%;
+  }
+}
+@media (min-width: 992px) {
+  .bz-partners-grid > ul > li {
+    width: 16.6666666667%;
+  }
+  .bz-partners-grid > ul > li.is-big {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .bz-partners-grid > ul > li {
+    width: 12.5%;
+  }
+  .bz-partners-grid > ul > li.is-big {
+    width: 16.6666666667%;
+  }
+}
+</style>

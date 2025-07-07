@@ -1,0 +1,154 @@
+.bz-header {
+    position: absolute;
+    z-index: 100;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.bz-header:has(.bz-menu) {
+    position: absolute
+}
+
+.bz-header .bz-logo {
+    min-height: 40px
+}
+
+.bz-header .bz-logo a {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center
+}
+
+.bz-header .bz-menu>ul>li>a {
+    text-transform: uppercase
+}
+
+.bz-header .bz-menu-expand {
+    color: #fff
+}
+
+.bz-header .bz-menu-expand.active {
+    color: var(--bs-secondary)
+}
+
+@media (min-width: 992px) {
+    .bz-header .bz-block-menu {
+        width: 100%
+    }
+
+    .bz-header .bz-menu>ul {
+        justify-content: space-between !important
+    }
+
+    .bz-header .bz-menu>ul>li>a {
+        color: var(--text-color-title)
+    }
+
+    .bz-header .bz-menu>ul>li>a:hover {
+        color: #fff
+    }
+}
+
+@media (max-width: 991px) {
+    .bz-menu {
+        border-top: none;
+        background-color: var(--bs-secondary)
+    }
+
+    .bz-menu>ul>li>a {
+        color: #fff
+    }
+}
+
+.bz-footer {
+    padding-bottom: 0
+}
+
+.bz-footer .bz-block-line {
+    margin-bottom: 0;
+    margin-top: 24px
+}
+
+.bz-footer .bz-block:has(.bz-line) {
+    margin-bottom: 0;
+    margin-top: 24px
+}
+
+.bz-footer .bz-block-copyright {
+    padding-top: 16px;
+    padding-bottom: 16px
+}
+
+.bz-footer .bz-copyright {
+    color: #fff
+}
+
+.bz-footer .bz-copyright .icon-breezing {
+    background-image: url("../../../images/logo-breezing-white.svg")
+}
+
+@media (min-width: 768px) {
+    .bz-footer .bz-block-line {
+        margin-top: 32px
+    }
+
+    .bz-footer .bz-block:has(.bz-line) {
+        margin-top: 32px
+    }
+}
+
+@media (min-width: 992px) {
+    .bz-footer .bz-block-line {
+        margin-top: 40px
+    }
+
+    .bz-footer .bz-block:has(.bz-line) {
+        margin-top: 40px
+    }
+}
+
+@media (min-width: 1200px) {
+    .bz-footer .bz-block-line {
+        margin-top: 48px
+    }
+
+    .bz-footer .bz-block:has(.bz-line) {
+        margin-top: 48px
+    }
+}
+
+.bz-box .bz-box__title .bz-box__title__name {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 3px
+}
+
+.bz-box .bz-box__title a.bz-box__title__name {
+    color: #fff
+}
+
+.bz-box .bz-box__title .bz-box__title__desc {
+    line-height: 1.6
+}
+
+@media (min-width: 1200px) {
+    .bz-box .bz-box__title .bz-box__title__desc {
+        max-width: 1020px;
+        font-size: 1.25rem
+    }
+
+    .bz-box.is-center .bz-box__title__desc {
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+@media (min-width: 1600px) {
+    .bz-box .bz-box__title .bz-box__title__desc {
+        font-size: 1.5rem
+    }
+}
+
+/*# sourceMappingURL=baynanza.css.map */

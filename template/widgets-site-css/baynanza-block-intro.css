@@ -1,0 +1,50 @@
+/*---------- baynanza block intro css ----------*/
+.baynanza-block-intro {
+  padding-top: 13.125rem;
+  padding-bottom: 13.125rem;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+}
+.baynanza-block-intro .bz-box .bz-box__title {
+  padding-bottom: 0;
+}
+.baynanza-block-intro .bz-box .bz-box__title .bz-box__title__name {
+  margin-bottom: 18.125rem;
+}
+.baynanza-block-intro .bz-box .bz-box__title .bz-box__title__name:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .baynanza-block-intro {
+    padding-top: 18.125rem;
+    padding-bottom: 18.125rem;
+  }
+  .baynanza-block-intro .bz-box .bz-box__title .bz-box__title__name {
+    margin-bottom: 23.125rem;
+  }
+}
+@media (min-width: 992px) {
+  .baynanza-block-intro {
+    padding-top: 23.125rem;
+    padding-bottom: 23.125rem;
+    background-size: auto 115%;
+  }
+  .baynanza-block-intro .bz-box .bz-box__title .bz-box__title__name {
+    margin-bottom: 28.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  .baynanza-block-intro {
+    padding-top: 28.75rem;
+    padding-bottom: 28.75rem;
+    background-size: auto auto;
+  }
+  .baynanza-block-intro .bz-box .bz-box__title .bz-box__title__name {
+    margin-bottom: 33.125rem;
+  }
+}
+/*---------- end baynanza block intro css ----------*/
+
+/*# sourceMappingURL=baynanza-block-intro.css.map */

@@ -1,0 +1,67 @@
+/*---------- block-owl-slider-link css ----------*/
+.bz-owl-slider .bz-grid .bz-grid__index {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  color: #6c757d;
+  margin-bottom: 16px;
+  display: none;
+}
+.bz-owl-slider .bz-grid .bz-grid__img {
+  float: none;
+  width: auto;
+  height: auto;
+  padding-top: 66.6666666667%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12px;
+}
+.bz-owl-slider .bz-grid .bz-grid__img:last-child {
+  margin-bottom: 0;
+}
+.bz-owl-slider .bz-grid .bz-grid__img a {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.bz-owl-slider .bz-grid .bz-grid__img img {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.bz-owl-slider .bz-grid .bz-grid__content {
+  margin-left: 0;
+}
+
+.bz-block-owl-slider-link .bz-owl-slider .owl-carousel .owl-dots {
+  display: block;
+  text-align: center;
+  padding-top: 16px;
+}
+.bz-block-owl-slider-link .bz-owl-slider .owl-carousel .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.bz-block-owl-slider-link .bz-owl-slider .owl-carousel .owl-dots .owl-dot:focus {
+  outline: none;
+}
+.bz-block-owl-slider-link .bz-owl-slider .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #007bff;
+}
+
+/*---------- end block-owl-slider-link css ----------*/

@@ -1,0 +1,26 @@
+{
+    "paymentMethod": {
+        "card": "Card",
+        "bankTransferVn": "Bank transfer (Vietnam)",
+        "gcash": "GCash"
+    },
+    "scanQrCodeInstruction": "Open your bank app to scan the QR code",
+    "payNow": "Pay now",
+    "somethingWentWrong": "Something went wrong",
+    "paymentFailed": "Payment failed",
+    "processing": "Processing...",
+    "shippingAddress": {
+        "address": "Address",
+        "city": "City",
+        "district": "District",
+        "country": "Country",
+        "postalCode": "Postal code"
+    },
+    "fullName": "Full name",
+    "email": "Email",
+    "mobileNumber": "Mobile number",
+    "enterYourName": "Enter your full name",
+    "enterYourEmail": "Enter your email address",
+    "enterYourMobileNumber": "Enter your mobile number"
+  }
+  

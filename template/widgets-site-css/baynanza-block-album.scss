@@ -1,0 +1,176 @@
+@import "../../src/sass/var";
+@import "../../src/sass/mixin-2024";
+@import "../../src/sass/function";
+/*---------- baynanza block album css ----------*/
+.baynanza-block-album{
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  .bz-album-grid{
+    >ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .bz-album-item{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    .bz-album-item__img{
+      padding-top: percentage(326/503);
+      position: relative;
+      z-index: 1;
+      a{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:before{
+          content: "";
+          z-index: 3;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          position: absolute;
+          @include m-transition-all(0.2s);
+          @include m-opacity(0);
+          background: rgba(0, 0, 0, 0.2); /* bán trong suốt */
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px); /* cho Safari */
+        }
+      }
+      img{
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+    .bz-album-item__content{
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: f-rem(15);
+      @include m-transition-all(0.2s);
+    }
+    .bz-album-item__title{
+      margin-bottom: 0;
+      font-size: 15px;
+      line-height: 1.5;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $color-white;
+      a{
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+    .bz-album-item__time{
+      color: $color-white;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .bz-album-item__desc{
+      color: rgba( $color-white, 0.7);
+      font-size: 10px;
+      line-height: 1.5;
+      @include m-opacity(0);
+      @include m-transition-all(0.2s);
+    }
+    &:hover{
+      .bz-album-item__img{
+        a{
+          &:before{
+            @include m-opacity(1);
+          }
+        }
+      }
+      .bz-album-item__content{
+        top: auto;
+        bottom: 0;
+      }
+      .bz-album-item__desc{
+        @include m-opacity(1);
+      }
+    }
+    &.is-coming-soon{
+      padding-top: percentage(326/503);
+      &:before{
+        content: "";
+        z-index: 3;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        @include m-transition-all(0.2s);
+        background: rgba(0, 0, 0, 0.5); /* bán trong suốt */
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px); /* cho Safari */
+      }
+      .bz-album-item__content{
+        bottom: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+//baynanza block album responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .baynanza-block-album{
+    .bz-album-grid{
+      >ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        >li{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .baynanza-block-album{
+    .bz-album-grid{
+      >ul{
+        >li{
+          width: percentage(1/3);
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+  .baynanza-block-album{
+    max-width: 1512px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1920px){
+
+}
+//end baynanza block album responsive css
+/*---------- end baynanza block album css ----------*/

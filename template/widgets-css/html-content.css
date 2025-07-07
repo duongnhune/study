@@ -1,0 +1,12 @@
+/*---------- block html content css ----------*/
+.bz-html-content {
+  line-height: 1.5;
+  font-size: 14px;
+}
+.bz-html-content p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+/*---------- end block html content css ----------*/

@@ -1,0 +1,25 @@
+{
+    "paymentMethod": {
+        "card": "Thẻ tín dụng",
+        "bankTransferVn": "Chuyển khoản ngân hàng",
+        "gcash": "GCash"
+    },
+    "scanQrCodeInstruction": "Quét mã QR để thanh toán",
+    "payNow": "Thanh toán ngay",
+    "somethingWentWrong": "Đã xảy ra lỗi",
+    "paymentFailed": "Thanh toán thất bại",
+    "processing": "Đang xử lý...",
+    "shippingAddress": {
+        "address": "Địa chỉ",
+        "city": "Thành phố",
+        "district": "Quận",
+        "country": "Quốc gia",
+        "postalCode": "Mã bưu điện"
+    },
+    "fullName": "Họ và tên",
+    "email": "Email",
+    "mobileNumber": "Số điện thoại",
+    "enterYourName": "Nhập họ và tên của bạn",
+    "enterYourEmail": "Nhập email của bạn",
+    "enterYourMobileNumber": "Nhập số điện thoại của bạn"
+}

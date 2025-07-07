@@ -1,0 +1,12 @@
+/*---------- block logo css ----------*/
+.bz-logo img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 40px;
+}
+.bz-logo .bz-logo__secondary {
+  display: none;
+}
+
+/*---------- end block logo css ----------*/

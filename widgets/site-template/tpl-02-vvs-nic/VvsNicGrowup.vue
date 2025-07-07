@@ -1,0 +1,214 @@
+<script setup lang="ts">
+interface GrowupItem {
+  icon: string
+  title: string
+  desc: string
+}
+interface Props {
+  items: GrowupItem[]
+}
+defineProps<Props>()
+</script>
+
+<template>
+  <div class="bz-block is-padding-top-small is-padding-bottom-small bg-primary bz-block-growup vvs-nic-block-growup" id="vvs-nic-block-growup">
+    <div class="container">
+      <div class="bz-box">
+        <div class="bz-box__content">
+          <div class="bz-growup-grid">
+            <ul>
+              <li v-for="(item, idx) in items" :key="idx">
+                <div class="bz-grid">
+                  <div class="bz-grid__img">
+                    <figure><img :src="item.icon" alt="icon" /></figure>
+                  </div>
+                  <div class="bz-grid__content">
+                    <div class="bz-grid__row">
+                      <h3 class="bz-grid__title">{{ item.title }}</h3>
+                    </div>
+                    <div class="bz-grid__row bz-grid__desc">{{ item.desc }}</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.bz-growup-grid .bz-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px;
+  background-color: rgb(76, 15, 66, 1);
+}
+.bg-primary {
+  background-color: rgba(7, 10, 79, 1) !important;
+}
+h3.bz-grid__title {
+  color: #fff;
+  margin-bottom: 8px;
+}
+.bz-grid__row.bz-grid__desc {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.bz-growup-grid .bz-grid .bz-grid__img {
+  margin-bottom: 12px;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+}
+.bz-growup-grid .bz-grid .bz-grid__img figure {
+  margin-bottom: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bz-growup-grid .bz-grid .bz-grid__img img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+}
+.bz-growup-grid .bz-grid .bz-grid__content {
+  width: auto;
+  margin-left: 0;
+}
+.bz-growup-grid .bz-grid .bz-grid__row {
+  margin-bottom: 8px;
+  text-align: center;
+  line-height: 1.5;
+}
+.bz-growup-grid .bz-grid .bz-grid__row:last-child {
+  margin-bottom: 0;
+}
+.bz-growup-grid .bz-grid .bz-grid__title {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.bz-growup-grid .bz-grid .bz-grid__desc {
+  font-size: 16px;
+  font-weight: 500;
+}
+.bz-growup-grid > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bz-growup-grid > ul > li {
+  padding-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .bz-growup-grid .bz-grid {
+    height: 100%;
+  }
+  .bz-growup-grid .bz-grid .bz-grid__title {
+    font-size: 28px;
+  }
+  .bz-growup-grid .bz-grid .bz-grid__desc {
+    font-size: 18px;
+  }
+  .bz-growup-grid > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-bottom: -24px;
+  }
+  .bz-growup-grid > ul > li {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 50%;
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .bz-growup-grid .bz-grid .bz-grid__title {
+    font-size: 32px;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) > li {
+    width: 33.3333333333%;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) > li .bz-grid .bz-grid__title {
+    font-size: 28px;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) > li .bz-grid .bz-grid__desc {
+    font-size: 18px;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(4)) > li {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .bz-growup-grid .bz-grid {
+    padding: 24px;
+  }
+  .bz-growup-grid .bz-grid .bz-grid__title {
+    font-size: 36px;
+  }
+  .bz-growup-grid .bz-grid .bz-grid__desc {
+    font-size: 20px;
+  }
+  .bz-growup-grid > ul {
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: -32px;
+  }
+  .bz-growup-grid > ul > li {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 32px;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) > li .bz-grid {
+    padding: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .bz-growup-grid > ul > li:last-child {
+    padding-bottom: 0;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) > li {
+    width: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) > li:last-child {
+    padding-bottom: 16px;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) > li .bz-grid {
+    height: 100%;
+    padding: 12px;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) > li .bz-grid .bz-grid__title {
+    font-size: 22px;
+  }
+  .bz-growup-grid > ul:has(> li:nth-child(3)) > li .bz-grid .bz-grid__desc {
+    font-size: 14px;
+  }
+}
+</style>

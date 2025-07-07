@@ -1,0 +1,77 @@
+@import "../../src/sass/var";
+@import "../../src/sass/mixin-2024";
+@import "../../src/sass/function";
+/*---------- baynanza block intro css ----------*/
+.baynanza-block-intro{
+  padding-top: f-rem(210);
+  padding-bottom: f-rem(210);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  .bz-box{
+    .bz-box__title{
+      padding-bottom: 0;
+      .bz-box__title__name{
+        margin-bottom: f-rem(290);
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+//baynanza block intro responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .baynanza-block-intro{
+    padding-top: f-rem(290);
+    padding-bottom: f-rem(290);
+    .bz-box{
+      .bz-box__title{
+        .bz-box__title__name{
+          margin-bottom: f-rem(370);
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .baynanza-block-intro{
+    padding-top: f-rem(370);
+    padding-bottom: f-rem(370);
+    background-size: auto 115%;
+    .bz-box{
+      .bz-box__title{
+        .bz-box__title__name{
+          margin-bottom: f-rem(450);
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .baynanza-block-intro{
+    padding-top: f-rem(460);
+    padding-bottom: f-rem(460);
+    background-size: auto auto;
+    .bz-box{
+      .bz-box__title{
+        .bz-box__title__name{
+          margin-bottom: f-rem(530);
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xxl-min){//pc largr size with 1400px tp grow up
+
+}
+@media (min-width: 1920px){
+  .baynanza-block-intro{
+
+  }
+}
+//end baynanza block intro responsive css
+/*---------- end baynanza block intro css ----------*/

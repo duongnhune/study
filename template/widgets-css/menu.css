@@ -1,0 +1,90 @@
+/*---------- block-menu css ----------*/
+.bz-menu {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: none;
+}
+.bz-menu > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bz-menu > ul > li > a {
+  text-decoration: none;
+  display: block;
+  color: #333;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.bz-menu > ul > li.active > a {
+  color: #007bff;
+}
+
+.bz-menu-expand {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  left: 15px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.bz-menu-expand:focus {
+  outline: none;
+}
+
+.bz-header:has(.bz-menu) {
+  position: relative;
+  z-index: 100;
+}
+
+@media (min-width: 992px) {
+  .bz-menu {
+    position: static;
+    background: transparent;
+    display: block !important;
+  }
+  .bz-menu > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .bz-menu > ul > li > a {
+    line-height: 40px;
+    padding: 0 16px;
+    color: #333;
+  }
+  .bz-menu > ul > li > a:hover {
+    color: #007bff;
+  }
+  .bz-header .bz-row .bz-col + .bz-col .bz-menu > ul {
+    justify-content: center;
+  }
+  .bz-header .bz-row .bz-col + .bz-col:last-child .bz-menu > ul {
+    justify-content: flex-end;
+  }
+  .bz-menu-expand {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .bz-menu {
+    border-top: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .bz-menu > ul {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .bz-header .bz-row:has(.bz-logo) .bz-col:first-child {
+    padding-left: 35px;
+  }
+}
+/*---------- end block-menu css ----------*/
